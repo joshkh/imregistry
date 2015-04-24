@@ -1,0 +1,22 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+
+
+
+
+<table class="table table-hover">
+	<thead>
+		<th>Name</th>
+		<th>URI</th>
+		<th>Web Service Path</th>
+		<th>Email</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="mine in mines">
+			<td>{{mine.name}}</td>
+			<td>{{mine.uri}}</td>
+			<td>TBD</td>
+			<td>{{mine.email}}</td>
+		</tr>
+	</tbody>
+</table>
