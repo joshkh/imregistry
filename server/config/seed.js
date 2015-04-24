@@ -31,19 +31,55 @@ User.find({}).remove(function() {
 
 Mine.find({}).remove(function() {
 
-  for (var i = 0; i < 10; i++) {
+  // for (var i = 0; i < 10; i++) {
 
-    var name = generate().dashed;
+  //   var name = generate().dashed;
+
+  //   Mine.create({
+  //     name: name,
+  //     uri: 'http://www.' + name + '.com',
+  //     email: 'admin@' + name + '.com',
+  //     active: 'true'
+  //   }, function() {
+  //     console.log('finished populating mines');
+  //   });
+
+  // }
 
     Mine.create({
-      name: name,
-      uri: 'http://www.' + name + '.com',
-      email: 'admin@' + name + '.com',
+      name: "RatMine",
+      uri: 'http://ratmine.mcw.edu',
+      opath: 'ratmine',
       active: 'true'
     }, function() {
-      console.log('finished populating mines');
+      console.log('finished populating RatMine');
     });
 
-  }
+    Mine.create({
+      name: "FlyMine",
+      uri: 'http://www.flymine.org',
+      opath: 'query',
+      active: 'true'
+    }, function() {
+      console.log('finished populating FlyMine');
+    });
+
+    Mine.create({
+      name: "HumanMine",
+      uri: 'http://www.humanmine.org',
+      opath: 'humanmine',
+      active: 'true'
+    }, function() {
+      console.log('finished populating HumanMine');
+    });
+
+    Mine.create({
+      name: "ThaleMine",
+      uri: 'https://apps.araport.org',
+      opath: "thalemine",
+      active: 'true'
+    }, function() {
+      console.log('finished populating ThaleMine');
+    });
 
 });

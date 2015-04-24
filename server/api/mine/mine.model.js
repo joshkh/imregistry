@@ -8,6 +8,7 @@ var MineSchema = new Schema({
 	name: String,
   uri: String,
   email: String,
+  opath: String,
   uuid: {
   	type: String,
   	default: function genUUID() {

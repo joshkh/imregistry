@@ -15,8 +15,35 @@
 		<tr ng-repeat="mine in mines">
 			<td>{{mine.name}}</td>
 			<td>{{mine.uri}}</td>
-			<td>TBD</td>
+			<td>{{mine.opath}}</td>
 			<td>{{mine.email}}</td>
 		</tr>
 	</tbody>
 </table>
+
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-4 column" ng-repeat="mine in mines">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color: {{mine.branding.properties.colors.focus.bg}}">
+					<h3 class="panel-title">
+						{{mine.name}}
+					</h3>
+					<!-- <img ng-src="{{mine.branding.properties.images.small}}"> -->
+					<img ng-src="{{fetchicon(mine)}}">
+				</div>
+				<div class="panel-body">
+					<p>{{mine.name}}</p>
+				</div>
+				<div class="panel-footer">
+					Panel footer
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- {{mines}} -->
